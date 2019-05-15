@@ -8,7 +8,7 @@ describe Notesapp do
   it 'User can add a note with a title and a body' do
     new_note = Notesapp.new
     new_note.add("Book Title", "Book body")
-    expect(new_note.add(:title => "Book Title", :body => "Book body")).to include(:title => "Book Title", :body => "Book body")
+    expect(new_note.note).to include(:title => "Book Title", :body => "Book body")
   end
 
 end

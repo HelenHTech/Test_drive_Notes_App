@@ -7,8 +7,7 @@ class Notesapp
   end
 
   def add(title, body)
-    @note.push({:title => title}, {:body => body})
-    puts @note
+    @note.push({:title => title, :body => body})
   end
 
 end
