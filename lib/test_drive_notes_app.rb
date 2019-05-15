@@ -1,11 +1,14 @@
 class Notesapp
-  def add
-    new_note = Notesapp.new
-    new_note = []
-    new_note.push("title_1", "body_template")
+  
+  attr_reader :note
+
+  def initialize
+    @note = []
   end
 
-  def see_list
-    return add[0]
+  def add(title, body)
+    @note.push({:title => title}, {:body => body})
+    puts @note
   end
+
 end
