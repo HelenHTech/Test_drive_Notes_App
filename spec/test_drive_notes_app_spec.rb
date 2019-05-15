@@ -11,4 +11,11 @@ describe Notesapp do
     expect(new_note.note).to include(:title => "Book Title", :body => "Book body")
   end
 
+
+  it 'User can see a list of all note titles' do
+    new_note = Notesapp.new
+    new_note.list_titles
+    expect(new_note.note).to eq(:title => "Book Title")
+  end
+
 end
