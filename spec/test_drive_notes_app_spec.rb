@@ -21,7 +21,7 @@ describe Notesapp do
     new_note.add("Book Title", "Book body")
     new_note.add("Book Title1", "Book body1")
     new_note.add("Book Title2", "Book body2")
-    expect(new_note.view_note).to eq(["Book Title2", "Book body2"])
+    expect(new_note.view_note("Book Title2")).to eq(["Book Title2", "Book body2"])
   end
 
 end
