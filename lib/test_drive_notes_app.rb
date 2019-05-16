@@ -17,5 +17,13 @@ class Notesapp
     end
     return list_of_books
   end
-  
+
+  def view_note
+    view_chosen_note = []
+    @note.map { |hash| hash.select { |key, value| 
+      if value == 'Book Title2'
+        return view_chosen_note.push(hash[:title],hash[:body])
+      end } }
+  end
+
 end
