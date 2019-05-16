@@ -14,8 +14,9 @@ describe Notesapp do
 
   it 'User can see a list of all note titles' do
     new_note = Notesapp.new
-    new_note.list_titles
-    expect(new_note.note).to eq(:title => "Book Title")
+    new_note.add("Book Title", "Book body")
+    new_note.add("Book Title1", "Book body1")
+    expect(new_note.list_titles).to eq(["Book Title", "Book Title1"])
   end
 
 end

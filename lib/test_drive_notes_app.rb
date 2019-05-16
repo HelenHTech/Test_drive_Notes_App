@@ -11,9 +11,11 @@ class Notesapp
   end
 
   def list_titles
-    @note.map(&:a)
-    # @note.get_keys :title
-    # add(title, body).map{|x|x[:a]}
+    list_of_books = []
+    @note.each do |note|
+      list_of_books.push(note[:title]) 
+    end
+    return list_of_books
   end
-
+  
 end
